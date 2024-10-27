@@ -24,7 +24,7 @@ Welcome to the **GitHub Data Summary Generator**! 🎉 This nifty tool allows yo
     ```bash
     go run github-summary.go
     ```
-   and enter your GitHub username (e.g., `Lidiya-MK`) when prompted.
+   and enter your GitHub username (e.g: `Lidiya-MK`) when prompted.
 4. Voilà! Your PDF report will be generated and ready for viewing.
 
 ## Why Use This Tool?
