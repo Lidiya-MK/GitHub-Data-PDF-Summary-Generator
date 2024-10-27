@@ -88,6 +88,10 @@ func main() {
 	scanner.Scan()
 	username := scanner.Text()
 
+	if username == "" {
+		log.Fatal("Username cannot be empty.")
+	}
+
 	repos, err := fetchRepos(username)
 	if err != nil {
 		log.Fatalf("Error fetching repositories: %v", err)
