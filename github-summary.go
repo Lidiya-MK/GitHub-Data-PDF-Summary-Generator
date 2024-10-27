@@ -63,8 +63,10 @@ func generatePDF(username string, repos []Repo) error {
 	}
 	pdf.Ln(-1)
 
+	pdf.SetFont("Arial", "", 8)
 	for _, repo := range repos {
-		rowHeight := 20.0
+		rowHeight := 10.0
+
 		pdf.CellFormat(columnWidths[0], rowHeight, repo.Name, "1", 0, "L", false, 0, "")
 		pdf.CellFormat(columnWidths[1], rowHeight, fmt.Sprintf("%d", repo.Stars), "1", 0, "C", false, 0, "")
 		pdf.CellFormat(columnWidths[2], rowHeight, fmt.Sprintf("%d", repo.Forks), "1", 0, "C", false, 0, "")
@@ -76,6 +78,7 @@ func generatePDF(username string, repos []Repo) error {
 			description = description[:50] + "..."
 		}
 		pdf.MultiCell(columnWidths[5], rowHeight, description, "1", "L", false)
+
 		pdf.Ln(0)
 	}
 
@@ -88,10 +91,6 @@ func main() {
 	scanner.Scan()
 	username := scanner.Text()
 
-	if username == "" {
-		log.Fatal("Username cannot be empty.")
-	}
-
 	repos, err := fetchRepos(username)
 	if err != nil {
 		log.Fatalf("Error fetching repositories: %v", err)
@@ -100,11 +99,13 @@ func main() {
 	fmt.Printf("\nRepositories for user '%s':\n", username)
 	for _, repo := range repos {
 		fmt.Printf("Repo: %s\n", repo.Name)
-		fmt.Printf("  Stars: %d, Forks: %d, Issues: %d, Size: %dKB, Description: %s\n", repo.Stars, repo.Forks, repo.Issues, repo.Size, repo.Description)
+		fmt.Printf("  Stars: %d, Forks: %d, Issues: %d, Size: %dKB\n", repo.Stars, repo.Forks, repo.Issues, repo.Size)
+		fmt.Printf("  Description: %s\n\n", repo.Description)
 	}
 
 	err = generatePDF(username, repos)
 	if err != nil {
 		log.Fatalf("Error generating PDF: %v", err)
 	}
+	fmt.Println("PDF generated successfully as 'Github_Repos.pdf'")
 }
