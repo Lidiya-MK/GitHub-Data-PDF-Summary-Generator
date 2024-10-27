@@ -1,7 +1,7 @@
 # GitHub Data Summary Generator
 
 Welcome to the **GitHub Data Summary Generator**! 🎉 This nifty tool allows you to fetch and summarize your GitHub repositories in a tabular format. 
-![image](https://github.com/user-attachments/assets/f0693797-0b20-48e5-a9da-73ee290c08b1)
+<img src="https://github.com/user-attachments/assets/f0693797-0b20-48e5-a9da-73ee290c08b1" style="height:250px">
 
 
 
