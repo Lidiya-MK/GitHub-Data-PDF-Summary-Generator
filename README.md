@@ -20,13 +20,12 @@ Welcome to the **GitHub Data Summary Generator**! 🎉 This nifty tool allows yo
 
 1. Clone this repository to your local machine.
 2. Install the required Go packages.
-3. Run the application and enter your GitHub username when prompted.
+3. Run the application (```go run github-summary.go```) and enter your GitHub username (eg: ```Lidiya-MK```)when prompted.
 4. Voilà! Your PDF report will be generated and ready for viewing.
 
 ## Why Use This Tool?
 
-It's perfect for reflecting on your projects, or just having a neat overview of your GitHub activity. Plus, it’s always fun to see your hard work compiled in one place! And you wouldn't have to go to a browser to get this info just one command and your username.
-
+It's perfect for reflecting on your projects, or just having a neat overview of your GitHub activity. Plus, you get to view this information from your terminal just one command and your Github username will do. 
 ## Contribution
 
 Feel free to contribute to this project! Whether it's fixing a bug, improving the code, or adding new features, your input is always welcome.
