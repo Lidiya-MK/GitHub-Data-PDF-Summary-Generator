@@ -20,12 +20,13 @@ Welcome to the **GitHub Data Summary Generator**! 🎉 This nifty tool allows yo
 
 1. Clone this repository to your local machine.
 2. Install the required Go packages.
-3. Run the application:
+3. Delete the existing sample report
+4. Run the application:
     ```bash
     go run github-summary.go
     ```
    and enter your GitHub username (e.g: `Lidiya-MK`) when prompted.
-4. Voilà! Your PDF report will be generated and ready for viewing.
+5. Voilà! Your PDF report will be generated and ready for viewing.
 
 ## Why Use This Tool?
 
